@@ -1,2 +1,3 @@
 # Calculator-Advanced-Swift
--Struct
+- Struct
+- Classes
