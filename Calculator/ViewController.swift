@@ -12,11 +12,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
     
-    var isFinishedTypingNumber: Bool = true
+    private var isFinishedTypingNumber: Bool = true
+    private var displayValue: Double {
+        get {
+            guard let number = Double(displayLabel.text!) else {
+                fatalError("Cannot convert type to a Double ")
+            }
+            return number
+        }
+    }
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         isFinishedTypingNumber = true
-        
+        if let calcMethod = sender.currentTitle {
+            switch calcMethod {
+            case "+/-":
+                displayLabel.text = String(displayValue * -1)
+            case "AC":
+                displayLabel.text = "0"
+            case "%":
+                displayLabel.text = String(displayValue / 100)
+            default:
+                return
+            }
+        }
     }
     
     
@@ -26,6 +45,11 @@ class ViewController: UIViewController {
                 displayLabel.text! = numValue
                 isFinishedTypingNumber = false
             } else {
+                if numValue == "." {
+                    if ((displayLabel.text?.contains(".")) == true) {
+                        return
+                    }
+                }
                 displayLabel.text! += numValue
             }
         }
