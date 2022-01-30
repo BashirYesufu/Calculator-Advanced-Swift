@@ -9,27 +9,31 @@
 import Foundation
 
 struct CalculatorLogic {
-    var number: Double
+    private var number: Double?
     
-    init(number: Double) {
+    mutating func setNumber(_ number: Double) {
         self.number = number
     }
     
     func calculate(symbol: String) -> Double? {
-        switch symbol {
-        case "+/-":
-            if symbol == "0" {
+        if let n = number {
+            
+            switch symbol {
+            case "+/-":
+                if symbol == "0" {
+                    return 0
+                } else {
+                    return n * -1
+                }
+            case "AC":
                 return 0
-            } else {
-            return number * -1
+            case "%":
+                return n / 100
+            default:
+                return nil
             }
-        case "AC":
-            return 0
-        case "%":
-            return number / 100
-        default:
-            return nil
+            
         }
-
+        return nil
     }
 }
