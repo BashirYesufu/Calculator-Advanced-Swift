@@ -28,19 +28,11 @@ class ViewController: UIViewController {
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         isFinishedTypingNumber = true
         if let calcMethod = sender.currentTitle {
-            switch calcMethod {
-            case "+/-":
-                if displayLabel.text == "0" {
-                    return
-                }
-                displayValue *= -1
-            case "AC":
-                displayValue = 0
-            case "%":
-                displayValue /= 100
-            default:
-                return
+            let calculator = CalculatorLogic(number: displayValue)
+            guard let result = calculator.calculate(symbol: calcMethod) else {
+                fatalError("The result of the calculation is nil")
             }
+            displayValue = result
         }
     }
     
