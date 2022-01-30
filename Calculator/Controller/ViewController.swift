@@ -20,6 +20,9 @@ class ViewController: UIViewController {
             }
             return number
         }
+        set {
+            displayLabel.text = String(newValue)
+        }
     }
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
@@ -27,11 +30,14 @@ class ViewController: UIViewController {
         if let calcMethod = sender.currentTitle {
             switch calcMethod {
             case "+/-":
-                displayLabel.text = String(displayValue * -1)
+                if displayLabel.text == "0" {
+                    return
+                }
+                displayValue *= -1
             case "AC":
-                displayLabel.text = "0"
+                displayValue = 0
             case "%":
-                displayLabel.text = String(displayValue / 100)
+                displayValue /= 100
             default:
                 return
             }
