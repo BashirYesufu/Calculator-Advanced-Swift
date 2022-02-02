@@ -19,7 +19,7 @@ A Simple calaculator app with full functionality.
 <table>
  <tr>
   <td>
-   <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/Documentation/main/image 1.png" width="400" height="600" />
+   <img align="left" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/main/Documentation/image 1.png" width="400" height="600" />
   </td>
   <td>
     <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/Documentation/main/image 2.png" width="400" height="600" />
