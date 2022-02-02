@@ -19,13 +19,13 @@ A Simple calaculator app with full functionality.
 <table>
  <tr>
   <td>
-   <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/What-Flower/Documentation/main/image 1.png" width="400" height="600" />
+   <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/Documentation/main/image 1.png" width="400" height="600" />
   </td>
   <td>
-    <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/What-Flower/Documentation/main/image 2.png" width="400" height="600" />
+    <img align="center" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/Documentation/main/image 2.png" width="400" height="600" />
   </td>
    <td>
-    <img align="right" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/What-Flower/Documentation/main/image 3.png" width="400" height="600" />
+    <img align="right" alt="IMG" src="https://raw.githubusercontent.com/BashirYesufu/Calculator-Advanced-Swift/Documentation/main/image 3.png" width="400" height="600" />
   </td>
  </tr>
 </table>
